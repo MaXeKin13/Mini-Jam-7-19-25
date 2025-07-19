@@ -33,10 +33,12 @@ public class JobApplication : MonoBehaviour
     {
         applicationTextUI.text = " ";
 
-        DOVirtual.DelayedCall(2f, () =>
+        transform.DOMove(AnimationHandler.Instance.finalSuccesPos.position, 1f).SetEase(Ease.InOutSine).OnComplete(() =>
         {
+            //Debug.Log("Reached final position");
             Destroy(gameObject);
         });
+        
     }
 
     public void FailAnimation()
