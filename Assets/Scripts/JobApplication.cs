@@ -10,7 +10,7 @@ public class JobApplication : MonoBehaviour
 
     //ontriggerenter set in GameManager as currentApp
     public string applicationText;
-    public string[] replacementTexts = new string[3];
+    public string[] replacementTexts;
 
     public TextMeshProUGUI applicationTextUI;
 
@@ -21,6 +21,8 @@ public class JobApplication : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.currentApp = this;
+
+        //replacementTexts = new string[3];
     }
 
     public void StartConveyor()
@@ -30,7 +32,15 @@ public class JobApplication : MonoBehaviour
    
     public void SetText()
     {
-        applicationText = GameManager.
+        //applicationText = flavorText.Get
+
+        Debug.Log(replacementTexts[0] + replacementTexts[1] + replacementTexts[2]);
+
+        applicationText = FlavorText.Instance.GetRandomFlavorText();
+
+        string formattedText = string.Format(applicationText, replacementTexts);
+
+        applicationTextUI.text = formattedText;
     }
 
     /*public void SetText()

@@ -155,9 +155,12 @@ MonoBehaviour:
     count: 1
   currentApp: {fileID: 563128505}
   applicationWords:
-  - frowns
-  - success
-  - failure
+  - GOOD
+  - NICE
+  - no
+  - z
+  - t
+  - y
   fullHealth: 10
   currentHealth: 10
 --- !u!4 &147949690
@@ -420,6 +423,77 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &365422940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365422942}
+  - component: {fileID: 365422941}
+  m_Layer: 0
+  m_Name: SampleTexts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &365422941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365422940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d897a72bd1334e4ba5440ebea69c531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flavorText:
+  - 'Hello,  My name is Random Guy, and I am very excited for the opportunity to
+    be hired by you. I like my {0}  and my dog who is also my daughter.  For the
+    six years of the development of my mental abilities, which I have gained at the
+    age of 16 when my father gambled away my college funding I have, very fortunately,
+    been left with no choice but to apply into your bloodsucking company.  I am very
+    proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy Yummy Candy
+    corn in my mouth. It feels so good on my tongue. The best feeling since the death
+    of my sister whom i was running a restaurant with.  My Profficiencies Include
+    {2}  buying beer at the local supermarket  In any way i really hope you can hire
+    me, i really like paying my rent and having private health insurance. '
+  - 'Hello,  My name is Randy Nice  I love my wife Hope Nice and recently she got
+    in a horrible car crash with the CEO of your company. We were a working household
+    so now that she is out of the job i need to work for both of us, so i was forced
+    to apply here so we could pay her pain medication without which her kneecaps
+    will explode I was a {0}  for three years at my previous job at construction.
+    My {1} has been deemed worthy and i even have been mentioned in our town newspaper
+    twice for my abilities at management of primate enclosures.  Both of my Cousins
+    commemorated my {2} so i think i could make the cut by your application   In
+    any way i hope i will get this job since the life of both my wife and the neighbourhood
+    depends on it  '
+  - 'I''m Hairy Loser  I am now currently trying to rebuild my life, and in all honesty,
+    your company isn''t too bad During the divorce with my wife i have had nothing
+    to do so {0} became essentially my hobby in that period. I have had so many cups
+    of irish coffee that ath thso paint i can barley right th name of yer company. 
+    Whers r myu soks? Mabe ma {1} cud hepl u????? mbe it col hel me?????? >>???????
+    !!!!!!!!!!! {2} ???????????  Salary Hairy  '
+--- !u!4 &365422942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365422940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 637.61395, y: -535.9903, z: -114.97018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,9 +939,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63018c4406e7c7c4fb53340660b918d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flavorText: {fileID: 0}
   identifier: 0
-  applicationText: 
-  replacementTexts: []
+  applicationText: ' Hello,  My name is Random Guy, and I am very excited for the
+    opportunity to be hired by you. I like my {0}  and my dog who is also my daughter. 
+    For the six years of the development of my mental abilities, which I have gained
+    at the age of 16 when my father gambled away my college funding I have, very
+    fortunately, been left with no choice but to apply into your bloodsucking company. 
+    I am very proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy
+    Yummy Candy corn in my mouth. It feels so good on my tongue. The best feeling
+    since the death of my sister whom i was running a restaurant with.  My Profficiencies
+    Include {2}  buying beer at the local supermarket  In any way i really hope you
+    can hire me, i really like paying my rent and having private health insurance.  '
+  replacementTexts:
+  - 
+  - 
+  - 
   applicationTextUI: {fileID: 730135138}
   appTimer: 5
 --- !u!4 &563128506
@@ -957,7 +1044,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1052,7 +1139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -830.5, y: -314.9}
+  m_AnchoredPosition: {x: -791, y: 446}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &832575517
@@ -1133,9 +1220,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63018c4406e7c7c4fb53340660b918d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flavorText: {fileID: 0}
   identifier: 1
-  applicationText: 
-  replacementTexts: []
+  applicationText: ' Hello,  My name is Random Guy, and I am very excited for the
+    opportunity to be hired by you. I like my {0}  and my dog who is also my daughter. 
+    For the six years of the development of my mental abilities, which I have gained
+    at the age of 16 when my father gambled away my college funding I have, very
+    fortunately, been left with no choice but to apply into your bloodsucking company. 
+    I am very proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy
+    Yummy Candy corn in my mouth. It feels so good on my tongue. The best feeling
+    since the death of my sister whom i was running a restaurant with.  My Profficiencies
+    Include {2}  buying beer at the local supermarket  In any way i really hope you
+    can hire me, i really like paying my rent and having private health insurance.  '
+  replacementTexts:
+  - 
+  - 
+  - 
   applicationTextUI: {fileID: 2055768035}
   appTimer: 5
 --- !u!4 &855753582
@@ -1184,9 +1284,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63018c4406e7c7c4fb53340660b918d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flavorText: {fileID: 0}
   identifier: 4
-  applicationText: 
-  replacementTexts: []
+  applicationText: ' Hello,  My name is Random Guy, and I am very excited for the
+    opportunity to be hired by you. I like my {0}  and my dog who is also my daughter. 
+    For the six years of the development of my mental abilities, which I have gained
+    at the age of 16 when my father gambled away my college funding I have, very
+    fortunately, been left with no choice but to apply into your bloodsucking company. 
+    I am very proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy
+    Yummy Candy corn in my mouth. It feels so good on my tongue. The best feeling
+    since the death of my sister whom i was running a restaurant with.  My Profficiencies
+    Include {2}  buying beer at the local supermarket  In any way i really hope you
+    can hire me, i really like paying my rent and having private health insurance.  '
+  replacementTexts:
+  - 
+  - 
+  - 
   applicationTextUI: {fileID: 1895913742}
   appTimer: 5
 --- !u!4 &961372343
@@ -1636,7 +1749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1731,7 +1844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -727.7, y: -410.5}
+  m_AnchoredPosition: {x: -785, y: 442}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1985162427
@@ -1874,7 +1987,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1969,7 +2082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -873.2, y: -369.2}
+  m_AnchoredPosition: {x: -760, y: 438}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
@@ -1987,3 +2100,4 @@ SceneRoots:
   - {fileID: 1321739463}
   - {fileID: 1561930286}
   - {fileID: 539295275}
+  - {fileID: 365422942}

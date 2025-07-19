@@ -33,33 +33,56 @@ public class GameManager : MonoBehaviour
 
     private void SetDictionary()
     {
-        for(int i = 0; i < applicationWords.Length; i++)
+        for (int i = 0; i < applicationWords.Length; i++)
         {
             keyValuePairs.Add(i, applicationWords[i]);
-        }       
+        }
     }
     public void GetApplicationText(JobApplication app)
     {
-        //set text from dictionary
+        //set text from dictionary  
         if (keyValuePairs.TryGetValue(app.identifier, out string text))
         {
-            int randomText = UnityEngine.Random.Range(0, 2);
+            int randomText = UnityEngine.Random.Range(0, app.replacementTexts.Length);
             app.replacementTexts[randomText] = text;
 
-            //todo: make sure not to accidentally put needed text
+            // Set other replacementTexts as random texts from applicationWords[]  
+            for (int i = 0; i < app.replacementTexts.Length; i++)
+            {
+                if (i != randomText)
+                {
+                    int randomIndex;
+                    do
+                    {
+                        randomIndex = UnityEngine.Random.Range(0, applicationWords.Length);
+                    }
+                    while (neededApplications.Exists(neededApp => neededApp.identifier == randomIndex));
+
+                    app.replacementTexts[i] = applicationWords[randomIndex];
+                }
+            }
+
+            Debug.Log("Get application Text " + app.identifier);
         }
         else
         {
-            //set all random
+            //set all random  
             for (int i = 0; i < app.replacementTexts.Length; i++)
             {
-                int randomIndex = UnityEngine.Random.Range(0, keyValuePairs.Count);
+                int randomIndex;
+                do
+                {
+                    randomIndex = UnityEngine.Random.Range(0, keyValuePairs.Count);
+                }
+                while (neededApplications.Exists(neededApp => neededApp.identifier == randomIndex));
+
                 app.replacementTexts[i] = keyValuePairs[randomIndex];
             }
             app.SetText();
 
-            Debug.LogError("Identifier not found in dictionary: " + app.identifier);
+            Debug.Log("Identifier not found in dictionary: " + app.identifier);
         }
+        app.SetText();
     }
     public void CheckApplication(JobApplication app)
     {
