@@ -201,6 +201,25 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+
+    public string[] GetNeededApplicationsText()
+    {
+        string[] neededTexts = new string[neededApplications.Count];
+        for (int i = 0; i < neededApplications.Count; i++)
+        {
+            NeededApplication neededApp = neededApplications[i];
+            if (keyValuePairs.TryGetValue(neededApp.identifier, out string text))
+            {
+                neededTexts[i] = text;
+            }
+            else
+            {
+                neededTexts[i] = $"Unknown Application {neededApp.identifier} x{neededApp.count}";
+            }
+        }
+        return neededTexts;
+    }
     [Serializable]
     public class NeededApplication
     {
