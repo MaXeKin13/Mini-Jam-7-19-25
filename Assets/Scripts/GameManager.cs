@@ -36,8 +36,30 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < applicationWords.Length; i++)
         {
             keyValuePairs.Add(i, applicationWords[i]);
+        }       
+    }
+    public void GetApplicationText(JobApplication app)
+    {
+        //set text from dictionary
+        if (keyValuePairs.TryGetValue(app.identifier, out string text))
+        {
+            int randomText = UnityEngine.Random.Range(0, 2);
+            app.replacementTexts[randomText] = text;
+
+            //todo: make sure not to accidentally put needed text
         }
-        
+        else
+        {
+            //set all random
+            for (int i = 0; i < app.replacementTexts.Length; i++)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, keyValuePairs.Count);
+                app.replacementTexts[i] = keyValuePairs[randomIndex];
+            }
+            app.SetText();
+
+            Debug.LogError("Identifier not found in dictionary: " + app.identifier);
+        }
     }
     public void CheckApplication(JobApplication app)
     {

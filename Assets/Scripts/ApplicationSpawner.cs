@@ -18,8 +18,10 @@ public class ApplicationSpawner : MonoBehaviour
     public void SpawnApplication()
     {
         int randApp = Random.Range(0, applicationPrefab.Length);
-        var app = Instantiate(applicationPrefab[randApp], transform.position, Quaternion.identity, transform);
-        app.GetComponent<JobApplication>().StartConveyor();
+        var app = Instantiate(applicationPrefab[randApp], transform.position, Quaternion.identity, transform).GetComponent<JobApplication>();
+        app.StartConveyor();
+
+        GameManager.Instance.GetApplicationText(app);
 
         app.transform.DOMove(endPos.position, 5f).OnComplete(()=> 
         { 
