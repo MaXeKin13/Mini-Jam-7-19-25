@@ -33,18 +33,11 @@ public class JobApplication : MonoBehaviour
     {
         applicationTextUI.text = " ";
         Debug.Log(transform.position);
-        transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f).OnComplete(() =>
-        {
-            Debug.Log(transform.position);
-            transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f).OnComplete(()=>
-            {
-                
-                Destroy(gameObject);
-            } );
-            //Debug.Log("Reached final position");
-            Destroy(gameObject);
-        });
-        
+        var seq = DOTween.Sequence();
+        seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[0].position, 1f));
+        seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f));
+        seq.OnComplete(() => Destroy(gameObject));
+
     }
 
     public void FailAnimation()
