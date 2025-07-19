@@ -222,6 +222,7 @@ MonoBehaviour:
   - DISCORD KITTEN
   - PAJOFFICE
   - DADADA
+  - CHILD
   fullHealth: 10
   currentHealth: 10
   healthText: {fileID: 1332673665}
