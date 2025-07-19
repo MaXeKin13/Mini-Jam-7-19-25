@@ -5,6 +5,8 @@ public class AnimationHandler : MonoBehaviour
     public Transform[] finalSuccesPos;
 
 
+    public Transform finalPos;
+
 
     public static AnimationHandler Instance;
 

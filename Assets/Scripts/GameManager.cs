@@ -29,10 +29,11 @@ public class GameManager : MonoBehaviour
 
     public NeededWords neededWordsText;
     public ApplicationSpawner spawner;
+
+    public AudioManager audioManager;
     private void Awake()
     {
         Instance = (Instance == null) ? this : Instance;
-
         SetDictionary();
 
         UpdateHealthText();
@@ -203,7 +204,7 @@ public class GameManager : MonoBehaviour
     public void FailApplication(int num)
     {
         UpdateHealth(num);
-
+        audioManager.PlayRandomScream();
         currentApp.FailAnimation();
         //Destroy(currentApp.gameObject);
         currentApp = null;
