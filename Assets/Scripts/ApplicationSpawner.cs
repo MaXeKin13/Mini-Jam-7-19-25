@@ -8,6 +8,7 @@ public class ApplicationSpawner : MonoBehaviour
 
     public Transform endPos;
 
+    public float timer = 15f;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.A))
@@ -23,7 +24,7 @@ public class ApplicationSpawner : MonoBehaviour
 
         GameManager.Instance.GetApplicationText(app);
 
-        app.transform.DOMove(endPos.position, 5f).OnComplete(()=> 
+        app.transform.DOMove(endPos.position, timer).OnComplete(()=> 
         { 
             Debug.Log("Reach end of Conveyorbelt");
             GameManager.Instance.DenyApplication(app.GetComponent<JobApplication>());

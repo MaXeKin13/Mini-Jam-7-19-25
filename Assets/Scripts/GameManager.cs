@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public int fullHealth;
     public int currentHealth;
     public TextMeshProUGUI healthText;
+
+    public NeededWords neededWordsText;
+    
     private void Awake()
     {
         Instance = (Instance == null) ? this : Instance;
@@ -113,6 +116,7 @@ public class GameManager : MonoBehaviour
                 //increment count  
                 Debug.Log("Application " + app.identifier + " accepted.");
                 neededApp.count--;
+                neededWordsText.UpdateText(); // Update the needed words text display
                 StampApplication();
                 break;
             }
@@ -178,14 +182,16 @@ public class GameManager : MonoBehaviour
         //animation + stamp
         UpdateHealth(1);
 
-        Destroy(currentApp.gameObject);
+        currentApp.SuccessAnimation();
+        //Destroy(currentApp.gameObject);
 
     }
     public void FailApplication(int num)
     {
         UpdateHealth(num);
 
-        Destroy(currentApp.gameObject);
+        currentApp.FailAnimation();
+        //Destroy(currentApp.gameObject);
         Debug.Log(currentApp + " destroyed");
     }
 

@@ -147,7 +147,7 @@ RectTransform:
   m_GameObject: {fileID: 2073987}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1924.4243}
-  m_LocalScale: {x: 5.3577, y: 5.3577, z: 5.3577}
+  m_LocalScale: {x: 1.7139993, y: 1.7139993, z: 1.7139993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1437377572}
@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.84595, y: 834.125}
+  m_AnchoredPosition: {x: 257.84595, y: 918}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073989
@@ -280,7 +280,7 @@ RectTransform:
   m_GameObject: {fileID: 220227985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1924.4243}
-  m_LocalScale: {x: 5.3577, y: 5.3577, z: 5.3577}
+  m_LocalScale: {x: 1.7139993, y: 1.7139993, z: 1.7139993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 290490752}
@@ -288,7 +288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.84595, y: 675.00006}
+  m_AnchoredPosition: {x: 257.84595, y: 849.00006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220227987
@@ -685,7 +685,7 @@ RectTransform:
   m_GameObject: {fileID: 468926556}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1924.4243}
-  m_LocalScale: {x: 5.3577, y: 5.3577, z: 5.3577}
+  m_LocalScale: {x: 1.7139993, y: 1.7139993, z: 1.7139993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 353488783}
@@ -693,7 +693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.84595, y: 997}
+  m_AnchoredPosition: {x: 257.84595, y: 991}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468926558
@@ -838,12 +838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

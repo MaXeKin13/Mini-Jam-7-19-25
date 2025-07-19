@@ -157,17 +157,20 @@ MonoBehaviour:
     count: 1
   currentApp: {fileID: 563128505}
   applicationWords:
-  - GOOD
-  - NICE
-  - PERFECT
+  - BLOOD
+  - JUICE
+  - SUCKER
   - CHEZBURGUR
   - DAWG
   - GOOBER
-  - HOOPLAH
   - PEETAH
+  - DISCORD KITTEN
+  - PAJOFFICE
+  - DADADA
   fullHealth: 10
   currentHealth: 10
   healthText: {fileID: 1332673665}
+  neededWordsText: {fileID: 258861850}
 --- !u!4 &147949690
 Transform:
   m_ObjectHideFlags: 0
@@ -504,32 +507,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flavorText:
-  - 'Hello,  My name is Random Guy, and I am very excited for the opportunity to
-    be hired by you. I like my {0}  and my dog who is also my daughter.  For the
-    six years of the development of my mental abilities, which I have gained at the
-    age of 16 when my father gambled away my college funding I have, very fortunately,
+  - "Hello,  My name is Random Guy, and I am very excited for the opportunity to
+    be hired by you. I like my {0}  and my dog who is also my daughter.  At the age
+    of 16 when my father gambled away my college funding I have, very fortunately,
     been left with no choice but to apply into your bloodsucking company.  I am very
-    proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy Yummy Candy
-    corn in my mouth. It feels so good on my tongue. The best feeling since the death
-    of my sister whom i was running a restaurant with.  My Profficiencies Include
-    {2}  buying beer at the local supermarket  In any way i really hope you can hire
-    me, i really like paying my rent and having private health insurance. '
-  - 'Hello,  My name is Randy Nice  I love my wife Hope Nice and recently she got
-    in a horrible car crash with the CEO of your company. We were a working household
-    so now that she is out of the job i need to work for both of us, so i was forced
+    proficient with {1}  and like candy corn in my mouth. The best feeling since
+    the death of my sister. My Profficiencies Include {2}  buying beer at the local
+    supermarket  In any way i really hope you can hire me, i really like paying my
+    rent and having health insurance. \t Sincerely  Guy  Random  "
+  - 'Hello,  My name is Randy Nice  I love my wife, she got in a horrible car crash
+    with the CEO of your company. Now i need to work for both of us, so i was forced
     to apply here so we could pay her pain medication without which her kneecaps
-    will explode I was a {0}  for three years at my previous job at construction.
-    My {1} has been deemed worthy and i even have been mentioned in our town newspaper
-    twice for my abilities at management of primate enclosures.  Both of my Cousins
-    commemorated my {2} so i think i could make the cut by your application   In
-    any way i hope i will get this job since the life of both my wife and the neighbourhood
-    depends on it  '
-  - 'I''m Hairy Loser  I am now currently trying to rebuild my life, and in all honesty,
-    your company isn''t too bad During the divorce with my wife i have had nothing
+    will explode. I was a {0}  for three years at my previous job at construction.
+    My {1} has been deemed worthy and I even have been mentioned in our town newspaper.
+    Both of my Cousins commemorated my {2} so i think i could make the cut by your
+    application.   In any way i hope i will get this job since the life of both my
+    wife and the neighbourhood depends on it   Sincerely  Nice  Randy  '
+  - I'm Hairy Loser  I am now currently trying to rebuild my life, and in all honesty,
+    your company isn't too bad During the divorce with my wife i have had nothing
     to do so {0} became essentially my hobby in that period. I have had so many cups
     of irish coffee that ath thso paint i can barley right th name of yer company. 
     Whers r myu soks? Mabe ma {1} cud hepl u????? mbe it col hel me?????? >>???????
-    !!!!!!!!!!! {2} ???????????  Salary Hairy  '
+    !!!!!!!!!!! {2} ???????????
+  - "Hello Im Matilda Servant,  Accent on the last sillable. Get It? Like French
+    and also like Syllable but like\u2026 Silly? Funny Right? Anyway r u looking
+    for someone with {0} becuz like, i\u2019ve got it. Fr Fr.  Werk  I know im such
+    a character, like you cant even prolly stand me, but its ok, Confidence is Key
+    Period Like i have so many {1} U can fire like, everyone, like im serious If
+    you would know how much i have put in these applications you wil DIEEEEEEE!!!!!!!!
+    Im joking wit u ) but like you should give me chance just to see my {2} Fr Fr  
+    Well Like i will se you later i guess  Byeeeeeeeeeeeeeeeee!  Sincerely   Matilda "
 --- !u!4 &365422942
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,7 +1014,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 730135138}
-  appTimer: 5
 --- !u!4 &563128506
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1166,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -241.13023, w: -347.30267}
+  m_margin: {x: 0, y: 0, z: -607.25806, w: -587.0821}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1288,7 +1294,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 2055768035}
-  appTimer: 5
 --- !u!4 &855753582
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1460,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 1895913742}
-  appTimer: 5
 --- !u!4 &961372343
 Transform:
   m_ObjectHideFlags: 0
@@ -1745,6 +1749,7 @@ MonoBehaviour:
   - {fileID: 855753580}
   - {fileID: 961372341}
   endPos: {fileID: 1561930286}
+  timer: 12
 --- !u!4 &1321739463
 Transform:
   m_ObjectHideFlags: 0
@@ -2240,7 +2245,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -385.49603, w: -616.28357}
+  m_margin: {x: 0, y: 0, z: -520.5483, w: -616.28357}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2478,7 +2483,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -240.59764, w: -303.58105}
+  m_margin: {x: 0, y: 0, z: -524.44324, w: -521.8363}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
