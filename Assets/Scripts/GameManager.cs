@@ -152,13 +152,13 @@ public class GameManager : MonoBehaviour
                 {
                     //if count is 0, return  
                     Debug.Log("SUCCEED: Application " + app.identifier + " not needed");
-                    Destroy(app.gameObject);
+                    FailApplication(0);
                     break;
                 }
                 //increment count  
                 Debug.Log("FAIL: Application " + app.identifier + " needed.");
                 FailApplication(-2);
-                Destroy(currentApp.gameObject);
+                //Destroy(currentApp.gameObject);
                 break;
             }
         }
@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
         if (!isMatchFound)
         {
             Debug.Log("Application " + app.identifier + " is not needed.");
-            Destroy(app.gameObject);
+            FailApplication(0);
         }
 
         spawner.SpawnApplication();
@@ -178,6 +178,10 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             CheckApplication(currentApp);
+        }
+        if(Input.GetKeyDown(KeyCode.RightShift))
+        {
+            DenyApplication(currentApp);
         }
     }
 
