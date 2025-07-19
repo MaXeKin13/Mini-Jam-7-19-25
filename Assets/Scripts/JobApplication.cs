@@ -15,7 +15,6 @@ public class JobApplication : MonoBehaviour
     public TextMeshProUGUI applicationTextUI;
 
 
-    public float appTimer = 5f;
 
 
     private void Start()
@@ -30,6 +29,26 @@ public class JobApplication : MonoBehaviour
         //transform.DOMove()
     }
    
+    public void SuccessAnimation()
+    {
+        applicationTextUI.text = " ";
+        Debug.Log(transform.position);
+        var seq = DOTween.Sequence();
+        seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[0].position, 1f));
+        seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f));
+        seq.OnComplete(() => Destroy(gameObject));
+
+    }
+
+    public void FailAnimation()
+    {
+        applicationTextUI.text = " ";
+
+        DOVirtual.DelayedCall(2f, () =>
+        {
+            Destroy(gameObject);
+        });
+    }
     public void SetText()
     {
         //applicationText = flavorText.Get

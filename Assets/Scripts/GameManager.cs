@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -25,6 +26,9 @@ public class GameManager : MonoBehaviour
     public int fullHealth;
     public int currentHealth;
     public TextMeshProUGUI healthText;
+
+    public NeededWords neededWordsText;
+    public ApplicationSpawner spawner;
     private void Awake()
     {
         Instance = (Instance == null) ? this : Instance;
@@ -32,6 +36,12 @@ public class GameManager : MonoBehaviour
         SetDictionary();
 
         UpdateHealthText();
+
+        DOVirtual.DelayedCall(1f, () =>
+        {
+            spawner.SpawnApplication();
+        });
+        
     }
 
     private void UpdateHealthText()
@@ -113,6 +123,7 @@ public class GameManager : MonoBehaviour
                 //increment count  
                 Debug.Log("Application " + app.identifier + " accepted.");
                 neededApp.count--;
+                neededWordsText.UpdateText(); // Update the needed words text display
                 StampApplication();
                 break;
             }
@@ -123,6 +134,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("Application " + app.identifier + " is not needed.");
             FailApplication(-2);
         }
+
+        spawner.SpawnApplication(); // Spawn a new application after checking the current one
+
     }
 
     public void DenyApplication(JobApplication app)
@@ -153,6 +167,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Application " + app.identifier + " is not needed.");
             Destroy(app.gameObject);
         }
+
+        spawner.SpawnApplication();
     }
 
 
@@ -178,15 +194,19 @@ public class GameManager : MonoBehaviour
         //animation + stamp
         UpdateHealth(1);
 
-        Destroy(currentApp.gameObject);
+        currentApp.SuccessAnimation();
+
+        currentApp = null;
+        //Destroy(currentApp.gameObject);
 
     }
     public void FailApplication(int num)
     {
         UpdateHealth(num);
 
-        Destroy(currentApp.gameObject);
-        Debug.Log(currentApp + " destroyed");
+        currentApp.FailAnimation();
+        //Destroy(currentApp.gameObject);
+        currentApp = null;
     }
 
 
@@ -211,7 +231,7 @@ public class GameManager : MonoBehaviour
 
     private void FailGame()
     {
-
+        Application.Quit();
     }
 
 

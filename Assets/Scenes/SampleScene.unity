@@ -157,17 +157,21 @@ MonoBehaviour:
     count: 1
   currentApp: {fileID: 563128505}
   applicationWords:
-  - GOOD
-  - NICE
-  - PERFECT
+  - BLOOD
+  - JUICE
+  - SUCKER
   - CHEZBURGUR
   - DAWG
   - GOOBER
-  - HOOPLAH
   - PEETAH
+  - DISCORD KITTEN
+  - PAJOFFICE
+  - DADADA
   fullHealth: 10
   currentHealth: 10
   healthText: {fileID: 1332673665}
+  neededWordsText: {fileID: 258861850}
+  spawner: {fileID: 1321739462}
 --- !u!4 &147949690
 Transform:
   m_ObjectHideFlags: 0
@@ -423,13 +427,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7158171, y: -0, z: -0, w: 0.6982878}
-  m_LocalPosition: {x: 0, y: 5.84, z: 1.32}
+  m_LocalRotation: {x: 0.28565693, y: -0, z: -0, w: 0.95833194}
+  m_LocalPosition: {x: 0, y: 3.42, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 91.41998, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 33.196, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,32 +508,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flavorText:
-  - 'Hello,  My name is Random Guy, and I am very excited for the opportunity to
-    be hired by you. I like my {0}  and my dog who is also my daughter.  For the
-    six years of the development of my mental abilities, which I have gained at the
-    age of 16 when my father gambled away my college funding I have, very fortunately,
+  - "Hello,  My name is Random Guy, and I am very excited for the opportunity to
+    be hired by you. I like my {0}  and my dog who is also my daughter.  At the age
+    of 16 when my father gambled away my college funding I have, very fortunately,
     been left with no choice but to apply into your bloodsucking company.  I am very
-    proficient with {1}  and like candy corn in my mouth. Uhmmmm Yummy Yummy Candy
-    corn in my mouth. It feels so good on my tongue. The best feeling since the death
-    of my sister whom i was running a restaurant with.  My Profficiencies Include
-    {2}  buying beer at the local supermarket  In any way i really hope you can hire
-    me, i really like paying my rent and having private health insurance. '
-  - 'Hello,  My name is Randy Nice  I love my wife Hope Nice and recently she got
-    in a horrible car crash with the CEO of your company. We were a working household
-    so now that she is out of the job i need to work for both of us, so i was forced
+    proficient with {1}  and like candy corn in my mouth. The best feeling since
+    the death of my sister. My Profficiencies Include {2}  buying beer at the local
+    supermarket  In any way i really hope you can hire me, i really like paying my
+    rent and having health insurance. \t Sincerely  Guy  Random  "
+  - 'Hello,  My name is Randy Nice  I love my wife, she got in a horrible car crash
+    with the CEO of your company. Now i need to work for both of us, so i was forced
     to apply here so we could pay her pain medication without which her kneecaps
-    will explode I was a {0}  for three years at my previous job at construction.
-    My {1} has been deemed worthy and i even have been mentioned in our town newspaper
-    twice for my abilities at management of primate enclosures.  Both of my Cousins
-    commemorated my {2} so i think i could make the cut by your application   In
-    any way i hope i will get this job since the life of both my wife and the neighbourhood
-    depends on it  '
-  - 'I''m Hairy Loser  I am now currently trying to rebuild my life, and in all honesty,
-    your company isn''t too bad During the divorce with my wife i have had nothing
+    will explode. I was a {0}  for three years at my previous job at construction.
+    My {1} has been deemed worthy and I even have been mentioned in our town newspaper.
+    Both of my Cousins commemorated my {2} so i think i could make the cut by your
+    application.   In any way i hope i will get this job since the life of both my
+    wife and the neighbourhood depends on it   Sincerely  Nice  Randy  '
+  - I'm Hairy Loser  I am now currently trying to rebuild my life, and in all honesty,
+    your company isn't too bad During the divorce with my wife i have had nothing
     to do so {0} became essentially my hobby in that period. I have had so many cups
     of irish coffee that ath thso paint i can barley right th name of yer company. 
     Whers r myu soks? Mabe ma {1} cud hepl u????? mbe it col hel me?????? >>???????
-    !!!!!!!!!!! {2} ???????????  Salary Hairy  '
+    !!!!!!!!!!! {2} ???????????
+  - "Hello Im Matilda Servant,  Accent on the last sillable. Get It? Like French
+    and also like Syllable but like\u2026 Silly? Funny Right? Anyway r u looking
+    for someone with {0} becuz like, i\u2019ve got it. Fr Fr.  Werk  I know im such
+    a character, like you cant even prolly stand me, but its ok, Confidence is Key
+    Period Like i have so many {1} U can fire like, everyone, like im serious If
+    you would know how much i have put in these applications you wil DIEEEEEEE!!!!!!!!
+    Im joking wit u ) but like you should give me chance just to see my {2} Fr Fr  
+    Well Like i will se you later i guess  Byeeeeeeeeeeeeeeeee!  Sincerely   Matilda "
 --- !u!4 &365422942
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,7 +1015,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 730135138}
-  appTimer: 5
 --- !u!4 &563128506
 Transform:
   m_ObjectHideFlags: 0
@@ -1023,6 +1030,55 @@ Transform:
   m_Children:
   - {fileID: 511578276}
   - {fileID: 1826246713}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &598080070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598080072}
+  - component: {fileID: 598080071}
+  m_Layer: 0
+  m_Name: AnimationHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &598080071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7e046c432575e46b3e9283af696b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalSuccesPos:
+  - {fileID: 1916024129}
+  - {fileID: 1198432050}
+--- !u!4 &598080072
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598080070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1916024129}
+  - {fileID: 1198432050}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712141869
@@ -1160,7 +1216,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -241.13023, w: -347.30267}
+  m_margin: {x: 0, y: 0, z: -607.25806, w: -587.0821}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1183,14 +1239,14 @@ RectTransform:
   m_GameObject: {fileID: 730135137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.44608, y: 0.44608, z: 0.44608}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1826246713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -791, y: 446}
+  m_AnchoredPosition: {x: -468.99997, y: 270.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &832575517
@@ -1288,7 +1344,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 2055768035}
-  appTimer: 5
 --- !u!4 &855753582
 Transform:
   m_ObjectHideFlags: 0
@@ -1375,12 +1430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1455,7 +1510,6 @@ MonoBehaviour:
   - 
   - 
   applicationTextUI: {fileID: 1895913742}
-  appTimer: 5
 --- !u!4 &961372343
 Transform:
   m_ObjectHideFlags: 0
@@ -1507,7 +1561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 686, y: 425}
+  m_AnchoredPosition: {x: 401, y: 262}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106385328
@@ -1677,12 +1731,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1711,6 +1765,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1198432049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198432050}
+  m_Layer: 0
+  m_Name: FinalSuccessPos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1198432050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198432049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.16, y: 2.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 598080072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321739461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1830,7 @@ MonoBehaviour:
   - {fileID: 855753580}
   - {fileID: 961372341}
   endPos: {fileID: 1561930286}
+  timer: 12
 --- !u!4 &1321739463
 Transform:
   m_ObjectHideFlags: 0
@@ -1754,7 +1840,7 @@ Transform:
   m_GameObject: {fileID: 1321739461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2, y: 0, z: 0.71}
+  m_LocalPosition: {x: -5.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1788,7 +1874,7 @@ Transform:
   m_GameObject: {fileID: 1330192977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4037, y: 0.021, z: 0.5}
+  m_LocalPosition: {x: -0.4037, y: 0.021, z: -0}
   m_LocalScale: {x: 9.021387, y: 0.3421, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1902,7 +1988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: 472}
+  m_AnchoredPosition: {x: 179, y: 261}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332673665
@@ -2029,7 +2115,7 @@ Transform:
   m_GameObject: {fileID: 1561930285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.15, y: 0, z: 0.81}
+  m_LocalPosition: {x: 3.95, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2103,12 +2189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2240,7 +2326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -385.49603, w: -616.28357}
+  m_margin: {x: 0, y: 0, z: -520.5483, w: -616.28357}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2263,16 +2349,47 @@ RectTransform:
   m_GameObject: {fileID: 1895913741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.44608, y: 0.44608, z: 0.44608}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1985162428}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -785, y: 442}
+  m_AnchoredPosition: {x: -463, y: 266.00006}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1916024128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1916024129}
+  m_Layer: 0
+  m_Name: FinalSuccessPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916024129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916024128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.16, y: 0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 598080072}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1985162427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,12 +2458,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2478,7 +2595,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -240.59764, w: -303.58105}
+  m_margin: {x: 0, y: 0, z: -524.44324, w: -521.8363}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2501,14 +2618,14 @@ RectTransform:
   m_GameObject: {fileID: 2055768034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.44608, y: 0.44608, z: 0.44608}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1148015388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -760, y: 438}
+  m_AnchoredPosition: {x: -438, y: 262}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
@@ -2528,3 +2645,4 @@ SceneRoots:
   - {fileID: 539295275}
   - {fileID: 365422942}
   - {fileID: 258861851}
+  - {fileID: 598080072}
