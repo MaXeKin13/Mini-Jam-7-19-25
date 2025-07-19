@@ -43,7 +43,10 @@ public class JobApplication : MonoBehaviour
     public void FailAnimation()
     {
         applicationTextUI.text = " ";
-        transform.DOMove(AnimationHandler.Instance.finalPos.position, 1f).SetEase(Ease.InOutSine).OnComplete(()=> Destroy(gameObject));
+        transform.DOMove(AnimationHandler.Instance.finalPos.position, 1f).SetEase(Ease.InOutSine).OnComplete(()=> {
+            Instantiate(AnimationHandler.Instance.failEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        });
         
     }
     public void SetText()

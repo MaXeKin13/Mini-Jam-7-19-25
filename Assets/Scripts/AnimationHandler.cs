@@ -7,6 +7,8 @@ public class AnimationHandler : MonoBehaviour
 
     public Transform finalPos;
 
+    public GameObject failEffect;
+
 
     public static AnimationHandler Instance;
 
