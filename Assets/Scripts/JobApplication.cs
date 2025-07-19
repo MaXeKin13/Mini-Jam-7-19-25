@@ -43,11 +43,8 @@ public class JobApplication : MonoBehaviour
     public void FailAnimation()
     {
         applicationTextUI.text = " ";
-
-        DOVirtual.DelayedCall(2f, () =>
-        {
-            Destroy(gameObject);
-        });
+        transform.DOMove(AnimationHandler.Instance.finalPos.position, 1f).SetEase(Ease.InOutSine).OnComplete(()=> Destroy(gameObject));
+        
     }
     public void SetText()
     {
