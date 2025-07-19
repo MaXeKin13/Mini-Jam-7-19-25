@@ -239,6 +239,24 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void CheckWin()
+    {
+        bool allCountsZero = true;
+        foreach (NeededApplication neededApp in neededApplications)
+        {
+            if (neededApp.count > 0)
+            {
+                allCountsZero = false;
+                break;
+            }
+        }
+
+        if (allCountsZero)
+        {
+            Debug.Log("All NeededApplication counts are 0. Quitting application.");
+            Application.Quit();
+        }
+    }
 
     public string[] GetNeededApplicationsText()
     {

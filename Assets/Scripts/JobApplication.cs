@@ -36,7 +36,10 @@ public class JobApplication : MonoBehaviour
         var seq = DOTween.Sequence();
         seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[0].position, 1f));
         seq.Append(transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f));
-        seq.OnComplete(() => Destroy(gameObject));
+        seq.OnComplete(() => {
+            GameManager.Instance.CheckWin();
+            Destroy(gameObject);
+        });
 
     }
 
