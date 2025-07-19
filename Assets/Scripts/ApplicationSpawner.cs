@@ -16,6 +16,11 @@ public class ApplicationSpawner : MonoBehaviour
             SpawnApplication();
         }
     }
+
+    private void Start()
+    {
+        
+    }
     public void SpawnApplication()
     {
         int randApp = Random.Range(0, applicationPrefab.Length);

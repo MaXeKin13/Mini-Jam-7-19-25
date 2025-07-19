@@ -32,9 +32,15 @@ public class JobApplication : MonoBehaviour
     public void SuccessAnimation()
     {
         applicationTextUI.text = " ";
-
-        transform.DOMove(AnimationHandler.Instance.finalSuccesPos.position, 1f).SetEase(Ease.InOutSine).OnComplete(() =>
+        Debug.Log(transform.position);
+        transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f).OnComplete(() =>
         {
+            Debug.Log(transform.position);
+            transform.DOMove(AnimationHandler.Instance.finalSuccesPos[1].position, 1f).OnComplete(()=>
+            {
+                
+                Destroy(gameObject);
+            } );
             //Debug.Log("Reached final position");
             Destroy(gameObject);
         });

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     public NeededWords neededWordsText;
-    
+    public ApplicationSpawner spawner;
     private void Awake()
     {
         Instance = (Instance == null) ? this : Instance;
@@ -35,6 +36,12 @@ public class GameManager : MonoBehaviour
         SetDictionary();
 
         UpdateHealthText();
+
+        DOVirtual.DelayedCall(1f, () =>
+        {
+            spawner.SpawnApplication();
+        });
+        
     }
 
     private void UpdateHealthText()
@@ -127,6 +134,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("Application " + app.identifier + " is not needed.");
             FailApplication(-2);
         }
+
+        spawner.SpawnApplication(); // Spawn a new application after checking the current one
+
     }
 
     public void DenyApplication(JobApplication app)
@@ -157,6 +167,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Application " + app.identifier + " is not needed.");
             Destroy(app.gameObject);
         }
+
+        spawner.SpawnApplication();
     }
 
 
@@ -183,6 +195,8 @@ public class GameManager : MonoBehaviour
         UpdateHealth(1);
 
         currentApp.SuccessAnimation();
+
+        currentApp = null;
         //Destroy(currentApp.gameObject);
 
     }
@@ -192,7 +206,7 @@ public class GameManager : MonoBehaviour
 
         currentApp.FailAnimation();
         //Destroy(currentApp.gameObject);
-        Debug.Log(currentApp + " destroyed");
+        currentApp = null;
     }
 
 
@@ -217,7 +231,7 @@ public class GameManager : MonoBehaviour
 
     private void FailGame()
     {
-
+        Application.Quit();
     }
 
 

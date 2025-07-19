@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-    public Transform finalSuccesPos;
+    public Transform[] finalSuccesPos;
 
 
 
