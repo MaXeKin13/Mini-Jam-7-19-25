@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -23,12 +24,19 @@ public class GameManager : MonoBehaviour
     [Header("Health System")]
     public int fullHealth;
     public int currentHealth;
-
+    public TextMeshProUGUI healthText;
     private void Awake()
     {
         Instance = (Instance == null) ? this : Instance;
 
         SetDictionary();
+
+        UpdateHealthText();
+    }
+
+    private void UpdateHealthText()
+    {
+        healthText.text = "Health: " + currentHealth + "/" + fullHealth;
     }
 
     private void SetDictionary()
@@ -129,12 +137,13 @@ public class GameManager : MonoBehaviour
                 {
                     //if count is 0, return  
                     Debug.Log("SUCCEED: Application " + app.identifier + " not needed");
-                    
+                    Destroy(app.gameObject);
                     break;
                 }
                 //increment count  
                 Debug.Log("FAIL: Application " + app.identifier + " needed.");
                 FailApplication(-2);
+                Destroy(currentApp.gameObject);
                 break;
             }
         }
@@ -177,6 +186,7 @@ public class GameManager : MonoBehaviour
         UpdateHealth(num);
 
         Destroy(currentApp.gameObject);
+        Debug.Log(currentApp + " destroyed");
     }
 
 
@@ -195,6 +205,8 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Current Health: " + currentHealth);
+
+        UpdateHealthText();
     }
 
     private void FailGame()
